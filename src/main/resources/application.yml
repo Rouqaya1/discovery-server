@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: discovery-server
+  config:
+     import: optional:configserver:http://config-server:8888
+  profiles:
+    active: default
+
+# Avoid some debugging logs at startup
+logging:
+  level:
+    org:
+      springframework:
+        boot: INFO
+        web: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  metrics:
+    export:
+      cloudwatch:
+        enabled: true
+        namespace: PetClinicMetrics
+        step: 30s
+  endpoint:
+    health:
+      show-details: always
