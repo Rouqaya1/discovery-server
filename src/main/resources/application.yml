@@ -2,18 +2,27 @@ spring:
   application:
     name: discovery-server
   config:
-     import: optional:configserver:http://config-server:8888
+    import: optional:configserver:http://config-server:8888
   profiles:
     active: default
 
-# Avoid some debugging logs at startup
+# Logging configuration
 logging:
   level:
     org:
       springframework:
         boot: INFO
         web: INFO
+    # Log Eureka-specific info (Optional)
+    org:
+      springframework:
+        cloud:
+          netfliex:
+            eureka:
+              client:
+                level: INFO
 
+# Management and Metrics Configuration
 management:
   endpoints:
     web:

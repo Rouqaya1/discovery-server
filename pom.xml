@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework.samples.petclinic.discovery</groupId>
@@ -35,7 +36,7 @@
     </dependencyManagement>
 
     <dependencies>
-        <!-- Spring Boot -->
+        <!-- Spring Boot Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -46,7 +47,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Spring Cloud -->
+        <!-- Spring Cloud Dependencies -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
@@ -56,21 +57,26 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
-        <!-- Third-party -->
+        <!-- Micrometer CloudWatch -->
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-cloudwatch2</artifactId>
         </dependency>
 
+        <!-- JAXB Runtime -->
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
         </dependency>
+
+        <!-- Chaos Monkey for Spring Boot -->
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>chaos-monkey-spring-boot</artifactId>
             <version>${chaos-monkey-spring-boot.version}</version>
         </dependency>
+
+        <!-- Jolokia Core -->
         <dependency>
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-core</artifactId>
@@ -132,4 +138,4 @@
     </profiles>
 
 </project>
-
+<!-- un petit test -->
