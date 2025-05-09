@@ -13,11 +13,8 @@ logging:
       springframework:
         boot: INFO
         web: INFO
-    # Log Eureka-specific info (Optional)
-    org:
-      springframework:
         cloud:
-          netfliex:
+          netflix:
             eureka:
               client:
                 level: INFO
@@ -37,4 +34,3 @@ management:
   endpoint:
     health:
       show-details: always
-#correction
